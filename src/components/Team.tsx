@@ -20,10 +20,11 @@ const team = [
     zh: "註冊會計師",
   },
   {
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCmKU_0-Ky4HKk8NH2R8GrOe1M1QwBEG1IjJhA_HEVlcRoXa1iytozVHJmCbI6HEhY4flT-8Jl9CUksnmRL_HYneAQgZE1d6k27ofgEDcCrfnFYd0MOG8o27Uvkj_ydCrs0dOqeTmtDSrb75g1zyLQWzZycG9w7RPlhXrzg_QwINCf27roXZ6QM-eRew_f7nfKKeISJ2tCvE0h9TIjopq4UElxoDl4v0eaH4Qkq7z6Q3Z6lOA5ExpI4Yl2ERBkHlXQjwhYxhlmByAs",
-    name: "Real Estate Agent",
-    role: "Local Acquisition",
+    img: "/jean-riley.jpg",
+    name: "Jean Riley",
+    role: "Professional Real Estate Consultant",
     zh: "當地資深經紀人",
+    dre: "DRE #02004228",
   },
 ];
 
@@ -55,6 +56,22 @@ export default function Team() {
             <h5 className="font-bold text-primary">{m.name}</h5>
             <p className="text-xs text-secondary font-bold mb-1">{m.role}</p>
             <p className="text-xs text-on-surface-variant">{m.zh}</p>
+            {"dre" in m && m.dre && (
+              <div className="mt-2 space-y-0.5 text-[11px] text-on-surface-variant">
+                <p>{m.dre}</p>
+                {"phone" in m && m.phone && (
+                  <p>
+                    <a
+                      href={`tel:${m.phone.replace(/[^0-9+]/g, "")}`}
+                      className="hover:text-secondary"
+                    >
+                      {m.phone}
+                    </a>
+                  </p>
+                )}
+                {"office" in m && m.office && <p>{m.office}</p>}
+              </div>
+            )}
           </div>
         ))}
       </div>
