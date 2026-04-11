@@ -24,7 +24,8 @@ const team = [
     name: "Jean Riley",
     role: "Professional Real Estate Consultant",
     zh: "當地資深經紀人",
-    dre: "DRE #02004228",
+    dre: "DRE #02004228 · Jeanify, Inc. (DRE #02414799)",
+    phone: "(858) 598-3888",
   },
 ];
 
@@ -56,20 +57,15 @@ export default function Team() {
             <h5 className="font-bold text-primary">{m.name}</h5>
             <p className="text-xs text-secondary font-bold mb-1">{m.role}</p>
             <p className="text-xs text-on-surface-variant">{m.zh}</p>
-            {"dre" in m && m.dre && (
+            {"dre" in m && m.dre && m.phone && m.office && (
               <div className="mt-2 space-y-0.5 text-[11px] text-on-surface-variant">
                 <p>{m.dre}</p>
-                {"phone" in m && m.phone && (
-                  <p>
-                    <a
-                      href={`tel:${m.phone.replace(/[^0-9+]/g, "")}`}
-                      className="hover:text-secondary"
-                    >
-                      {m.phone}
-                    </a>
-                  </p>
-                )}
-                {"office" in m && m.office && <p>{m.office}</p>}
+                <p>
+                  <a href={`tel:${m.phone.replace(/[^0-9+]/g, "")}`} className="hover:text-secondary">
+                    {m.phone}
+                  </a>
+                </p>
+                <p>{m.office}</p>
               </div>
             )}
           </div>
