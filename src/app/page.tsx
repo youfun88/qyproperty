@@ -8,6 +8,7 @@ import MarketInsights from "@/components/MarketInsights";
 import PricingTiers from "@/components/PricingTiers";
 import CaseStudies from "@/components/CaseStudies";
 import Team from "@/components/Team";
+import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -25,6 +26,7 @@ export default function Home() {
         <PricingTiers />
         <CaseStudies />
         <Team />
+        <FAQ />
         <FinalCTA />
       </main>
       <Footer />
