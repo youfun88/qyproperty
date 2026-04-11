@@ -57,7 +57,7 @@ export default function Team() {
             <h5 className="font-bold text-primary">{m.name}</h5>
             <p className="text-xs text-secondary font-bold mb-1">{m.role}</p>
             <p className="text-xs text-on-surface-variant">{m.zh}</p>
-            {"dre" in m && m.dre && m.phone && m.office && (
+            {"dre" in m && m.dre && m.phone && (
               <div className="mt-2 space-y-0.5 text-[11px] text-on-surface-variant">
                 <p>{m.dre}</p>
                 <p>
@@ -65,7 +65,6 @@ export default function Team() {
                     {m.phone}
                   </a>
                 </p>
-                <p>{m.office}</p>
               </div>
             )}
           </div>
