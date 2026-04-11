@@ -1,0 +1,41 @@
+name: Deploy to Cloud Run
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Configure Docker for Artifact Registry
+        run: gcloud auth configure-docker __REGISTRY_HOST__ --quiet
+        # TODO: 填入 registry host，例如 asia-east1-docker.pkg.dev
+
+      - name: Build and push Docker image
+        run: |
+          IMAGE="__IMAGE_PATH__"
+          TAG_SHA="${GITHUB_SHA::7}"
+          docker build -t "${IMAGE}:${TAG_SHA}" -t "${IMAGE}:latest" .
+          docker push "${IMAGE}:${TAG_SHA}"
+          docker push "${IMAGE}:latest"
+        # TODO: 填入完整 image 路徑，例如 asia-east1-docker.pkg.dev/PROJECT/REPO/IMAGE
+
+      - name: Deploy to Cloud Run
+        uses: google-github-actions/deploy-cloudrun@v2
+        with:
+          service: __SERVICE_NAME__    # TODO: 填入 Cloud Run service name
+          region: __REGION__           # TODO: 填入 region，例如 us-west1
+          image: __IMAGE_PATH__:${{ github.sha }}
+          flags: --port=3000 --allow-unauthenticated
