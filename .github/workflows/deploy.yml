@@ -35,5 +35,5 @@ jobs:
         with:
           service: qyproperty
           region: asia-east1
-          image: asia-east1-docker.pkg.dev/qyproperty/qyproperty/web:${{ github.sha }}
+          image: asia-east1-docker.pkg.dev/qyproperty/qyproperty/web:latest
           flags: --port=3000 --allow-unauthenticated
