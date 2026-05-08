@@ -342,6 +342,7 @@ p { margin: 0; }
 .hero-headline {
   font-style: italic;
   max-width: 14ch;
+  line-height: 1.15;
 }
 .hero-headline em {
   font-style: italic;
