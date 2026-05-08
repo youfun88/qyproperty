@@ -26,6 +26,7 @@ const team = [
     zh: "當地資深經紀人",
     dre: "DRE #02004228 · Jeanify, Inc. (DRE #02414799)",
     phone: "(858) 598-3888",
+    office: "9888 Carroll Centre Rd, Ste 200, San Diego, CA 92126",
   },
 ];
 
