@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       { source: "/tmp/jeanriley", destination: "/tmp/jeanriley/index.html" },
+      { source: "/shx", destination: "/shx/index.html" },
+      { source: "/shx/", destination: "/shx/index.html" },
     ];
   },
 };
