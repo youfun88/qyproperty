@@ -47,15 +47,83 @@ if (chips.length && courses.length) {
   });
 }
 
-// Booking form (mock submit)
-const form = document.querySelector('#booking-form');
-if (form) {
-  form.addEventListener('submit', e => {
+// Booking form — required-field validation + submit feedback
+const bookingForm = document.querySelector('#booking-form');
+if (bookingForm) {
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // Required fields: 'group' = checkbox/radio set, 'email' = format-checked
+  const reqFields = [
+    { sel: 'input[name="courses[]"]', kind: 'group' },
+    { sel: 'input[name="company"]',   kind: 'value' },
+    { sel: 'input[name="contact"]',   kind: 'value' },
+    { sel: 'input[name="email"]',     kind: 'email' },
+    { sel: 'input[name="size"]',      kind: 'group' },
+    { sel: 'select[name="source"]',   kind: 'value' },
+  ];
+
+  // The wrapper that receives the .has-error class (inner div for inline rows)
+  const wrapperOf = el =>
+    el.closest('.form__group--inline') ? el.parentElement
+                                       : el.closest('.form__group');
+
+  const clearError = f => f.wrap && f.wrap.classList.remove('has-error');
+
+  // Attach a single error-message element to each required field
+  reqFields.forEach(f => {
+    const el = bookingForm.querySelector(f.sel);
+    if (!el) return;
+    f.wrap = wrapperOf(el);
+    f.msg = document.createElement('p');
+    f.msg.className = 'form__error';
+    f.msg.setAttribute('role', 'alert');
+    f.wrap.appendChild(f.msg);
+    bookingForm.querySelectorAll(f.sel).forEach(input => {
+      input.addEventListener('input',  () => clearError(f));
+      input.addEventListener('change', () => clearError(f));
+    });
+  });
+
+  const fieldValid = f => {
+    const els = bookingForm.querySelectorAll(f.sel);
+    if (f.kind === 'group') return [...els].some(i => i.checked);
+    const v = els[0].value.trim();
+    if (f.kind === 'email') return v !== '' && EMAIL_RE.test(v);
+    return v !== '';
+  };
+
+  bookingForm.addEventListener('submit', e => {
     e.preventDefault();
+    let firstInvalid = null;
+
+    reqFields.forEach(f => {
+      if (!f.wrap) return;
+      const ok = fieldValid(f);
+      f.wrap.classList.toggle('has-error', !ok);
+      if (!ok) {
+        const raw = (bookingForm.querySelector(f.sel).value || '').trim();
+        f.msg.textContent = (f.kind === 'email' && raw !== '')
+          ? '請輸入有效的 Email 格式（需包含 @ 與網域）'
+          : '此欄位為必填';
+        if (!firstInvalid) firstInvalid = f;
+      }
+    });
+
+    // Missing required field → scroll to it and highlight
+    if (firstInvalid) {
+      firstInvalid.wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const focusEl = bookingForm.querySelector(firstInvalid.sel);
+      if (focusEl) setTimeout(() => focusEl.focus({ preventScroll: true }), 450);
+      return;
+    }
+
+    // Success
     const success = document.querySelector('#booking-success');
-    form.style.display = 'none';
-    if (success) success.style.display = 'block';
-    window.scrollTo({ top: success.offsetTop - 120, behavior: 'smooth' });
+    bookingForm.style.display = 'none';
+    if (success) {
+      success.style.display = 'block';
+      window.scrollTo({ top: success.offsetTop - 120, behavior: 'smooth' });
+    }
   });
 }
 
