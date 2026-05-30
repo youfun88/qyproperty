@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Logo from "@/components/Logo";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -8,14 +9,7 @@ export default function Header() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/80 glass-nav shadow-[0_20px_40px_rgba(11,28,48,0.06)]">
       <div className="flex justify-between items-center px-6 md:px-16 w-full h-20 max-w-[1920px] mx-auto">
-        <div className="flex items-center gap-2">
-          <span className="material-symbols-outlined text-on-surface" style={{ fontSize: 28 }}>
-            architecture
-          </span>
-          <span className="text-2xl font-bold tracking-tighter text-on-surface font-[family-name:var(--font-manrope)]">
-            Quality Life, Yours
-          </span>
-        </div>
+        <Logo />
 
         <div className="hidden md:flex gap-8 items-center">
           <a className="text-on-surface border-b-2 border-gold pb-1 font-[family-name:var(--font-manrope)] font-semibold tracking-tight" href="#portfolio">

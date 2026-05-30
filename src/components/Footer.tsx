@@ -19,18 +19,26 @@ export default function Footer() {
         <div>
           <h5 className="font-bold mb-4">Company</h5>
           <ul className="space-y-3 text-sm text-slate-500">
-            <li><a className="hover:text-gold transition-colors duration-200" href="#">Legal</a></li>
+            <li><a className="hover:text-gold transition-colors duration-200" href="#services">Advisory Services</a></li>
             <li><a className="hover:text-gold transition-colors duration-200" href="#cta">Contact</a></li>
-            <li><a className="hover:text-gold transition-colors duration-200" href="#">Careers</a></li>
+            <li>
+              <a className="hover:text-gold transition-colors duration-200" href="mailto:yufan@qyproperty.com">
+                yufan@qyproperty.com
+              </a>
+            </li>
           </ul>
         </div>
         <div>
           <h5 className="font-bold mb-4">San Diego Office</h5>
-          <p className="text-sm text-slate-500 leading-relaxed">
+          <address className="not-italic text-sm text-slate-500 leading-relaxed">
             3600 Torrey View Ct
             <br />
             San Diego, CA 92130
-          </p>
+            <br />
+            <a className="hover:text-gold transition-colors duration-200" href="mailto:yufan@qyproperty.com">
+              yufan@qyproperty.com
+            </a>
+          </address>
         </div>
       </div>
       <div className="mt-16 pt-8 border-t border-outline-variant/10 text-center text-xs text-slate-400">
