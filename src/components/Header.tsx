@@ -12,10 +12,7 @@ export default function Header() {
         <Logo />
 
         <div className="hidden md:flex gap-8 items-center">
-          <a className="text-on-surface border-b-2 border-gold pb-1 font-[family-name:var(--font-manrope)] font-semibold tracking-tight" href="#portfolio">
-            Portfolio
-          </a>
-          <a className="text-on-surface/60 font-medium hover:text-gold transition-all duration-300" href="#services">
+          <a className="text-on-surface border-b-2 border-gold pb-1 font-[family-name:var(--font-manrope)] font-semibold tracking-tight" href="#services">
             Services
           </a>
           <a className="text-on-surface/60 font-medium hover:text-gold transition-all duration-300" href="#insights">
@@ -39,8 +36,7 @@ export default function Header() {
 
       {mobileOpen && (
         <div className="flex flex-col gap-4 bg-white/95 glass-nav px-6 py-6 md:hidden">
-          <a href="#portfolio" onClick={() => setMobileOpen(false)} className="text-on-surface font-semibold">Portfolio</a>
-          <a href="#services" onClick={() => setMobileOpen(false)} className="text-on-surface/60">Services</a>
+          <a href="#services" onClick={() => setMobileOpen(false)} className="text-on-surface font-semibold">Services</a>
           <a href="#insights" onClick={() => setMobileOpen(false)} className="text-on-surface/60">Insights</a>
         </div>
       )}

@@ -10,9 +10,6 @@ export default function CaseStudies() {
             <br />
             <span className="text-secondary text-xl font-medium">成交實績</span>
           </h2>
-          <a className="text-primary font-bold border-b border-secondary" href="#">
-            View More Case Studies
-          </a>
         </div>
         <div className="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col lg:flex-row">
           <div className="lg:w-1/2 h-80 lg:h-auto relative">

@@ -19,12 +19,12 @@ export default function FinalCTA() {
           今天就與專家聯繫，為您的家庭財富與下一代的未來開啟新篇章。
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <button className="bg-secondary text-primary px-10 py-5 rounded-lg font-bold text-xl hover:scale-105 transition-transform">
+          <a
+            href="mailto:yufan@qyproperty.com"
+            className="bg-secondary text-primary px-10 py-5 rounded-lg font-bold text-xl hover:scale-105 transition-transform inline-block"
+          >
             Schedule Free Consultation
-          </button>
-          <button className="bg-white/10 text-white border border-white/20 backdrop-blur-md px-10 py-5 rounded-lg font-bold text-xl hover:bg-white/20 transition-colors">
-            Download Market Report
-          </button>
+          </a>
         </div>
         <p className="mt-12 text-surface-variant/40 text-sm">
           No commitment required. Expert advice only.
