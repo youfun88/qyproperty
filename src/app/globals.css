@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Don't scan the static site previews — they ship their own compiled CSS and
+   would only add scan churn + foreign class names to this project's build.
+   Paths are relative to this file (src/app/ -> ../../public). */
+@source not "../../public/tmp";
+@source not "../../public/shx";
+
 @theme inline {
   --color-primary: #000615;
   --color-primary-container: #0b1f3a;
