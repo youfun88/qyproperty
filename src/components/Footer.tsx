@@ -27,16 +27,14 @@ export default function Footer() {
         <div>
           <h5 className="font-bold mb-4">San Diego Office</h5>
           <p className="text-sm text-slate-500 leading-relaxed">
-            1234 Coastal Ave, Suite 100
+            3600 Torrey View Ct
             <br />
-            La Jolla, CA 92037
-            <br />
-            +1 (858) 555-0123
+            San Diego, CA 92130
           </p>
         </div>
       </div>
       <div className="mt-16 pt-8 border-t border-outline-variant/10 text-center text-xs text-slate-400">
-        &copy; {new Date().getFullYear()} Quality Life, Yours. Architectural Investment Advisory.
+        &copy; {new Date().getFullYear()} QY LLC. Quality Life, Yours is a brand of QY LLC.
       </div>
     </footer>
   );

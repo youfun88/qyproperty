@@ -1,15 +1,26 @@
 import Image from "next/image";
 
-const team = [
+type Member = {
+  img: string;
+  name: string;
+  role: string;
+  zh: string;
+  imgClassName?: string;
+  dre?: string;
+  phone?: string;
+  office?: string;
+};
+
+const team: Member[] = [
   {
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA52PtbY1oRMOU5nCVZB6K_895w5OufdmQrgnuATCeAP1lf9ItYGeg-pmarnh2VbzAmJ1tqeKiKAAFXD1ZErLBAwPPpD5NxY4qH8spH61DmmnQBgk67-p3RbSfIvi4_oae_qG4a2FpdOflbr3-kln8dzpsZxb3OyZ_zLzjQEkEpQdKZNh6303Lw-dED9EyGd24flBT3wX6RAblj2W_ClbwzfPhBULpZwl9QOy2axQ6FKd_9I7Zwu01vSfg62tejD5CGZ2wfo16M61M",
-    name: "Advisor",
+    img: "/yufan-chen-face-v3.jpg",
+    name: "Yufan Chen",
     role: "Investment Strategy",
     zh: "資產配置專家",
   },
   {
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAV_D57NKdt-DhdT1jD2h72BZpqKK3Y17rXyGsskKITganxXbi3AIDys0nNb5x4lUZj0LHtLpj3fy3HW-3UJ1-UY0wYMiEEzT6Cu05zoFCcRBUmJGDuHoW3JsptKsenFvRq2ndhqiGiHfnoVKRKHhkt9cOg7hwEq0ZocLUy82gAp584LHCNRVSDCf6jUtqUrb5pQ38s-jXvhu6U0QdEdjayYAUmcAVXfHgfv8lDdverXkpEWM9EKEn9BAlqa96r7t1vKaK7XRSftmE",
-    name: "Legal Counsel",
+    img: "/queenie-wu.jpg",
+    name: "Queenie Wu",
     role: "Compliance & Tax",
     zh: "跨國法律顧問",
   },
@@ -52,7 +63,7 @@ export default function Team() {
                 alt={m.name}
                 width={128}
                 height={128}
-                className="w-full h-full object-cover"
+                className={`w-full h-full object-cover ${m.imgClassName ?? ""}`}
               />
             </div>
             <h5 className="font-bold text-primary">{m.name}</h5>
