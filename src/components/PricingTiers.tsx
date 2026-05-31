@@ -68,15 +68,18 @@ export default function PricingTiers() {
                   </li>
                 ))}
               </ul>
-              <button
-                className={`w-full py-3 font-bold rounded-lg transition-colors ${
+              <a
+                href="https://calendly.com/yufansapp/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block w-full py-3 font-bold rounded-lg transition-colors text-center ${
                   t.featured
                     ? "bg-secondary text-primary hover:bg-white"
                     : "border border-primary hover:bg-primary hover:text-white"
                 }`}
               >
                 {t.cta}
-              </button>
+              </a>
             </div>
           ))}
         </div>

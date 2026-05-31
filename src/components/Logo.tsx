@@ -1,7 +1,7 @@
 export default function Logo({ className = "" }: { className?: string }) {
   return (
     <a
-      href="#"
+      href="/"
       aria-label="QY LLC — Quality Life, Yours"
       className={`group flex items-center gap-3 ${className}`}
     >

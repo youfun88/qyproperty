@@ -20,7 +20,9 @@ export default function FinalCTA() {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-6">
           <a
-            href="mailto:yufan@qyproperty.com"
+            href="https://calendly.com/yufansapp/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-secondary text-primary px-10 py-5 rounded-lg font-bold text-xl hover:scale-105 transition-transform inline-block"
           >
             Schedule Free Consultation

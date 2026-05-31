@@ -13,19 +13,15 @@ export default function Footer() {
         <div>
           <h5 className="font-bold mb-4">Quick Links</h5>
           <ul className="space-y-3 text-sm text-slate-500">
-            <li><a className="hover:text-gold transition-colors duration-200" href="#services">Advisory Services</a></li>
-            <li><a className="hover:text-gold transition-colors duration-200" href="#insights">Insights</a></li>
+            <li><a className="hover:text-gold transition-colors duration-200" href="/#services">Advisory Services</a></li>
+            <li><a className="hover:text-gold transition-colors duration-200" href="/#insights">Insights</a></li>
           </ul>
         </div>
         <div>
           <h5 className="font-bold mb-4">Company</h5>
           <ul className="space-y-3 text-sm text-slate-500">
-            <li><a className="hover:text-gold transition-colors duration-200" href="#services">Advisory Services</a></li>
-            <li>
-              <a className="hover:text-gold transition-colors duration-200" href="mailto:yufan@qyproperty.com">
-                yufan@qyproperty.com
-              </a>
-            </li>
+            <li><a className="hover:text-gold transition-colors duration-200" href="/#services">Advisory Services</a></li>
+            <li><a className="hover:text-gold transition-colors duration-200" href="/privacy">Privacy Policy</a></li>
           </ul>
         </div>
         <div>

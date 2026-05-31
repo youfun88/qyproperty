@@ -26,13 +26,21 @@ Investment minimums vary by tier. Entry-level investors typically start with pro
 ### Do I need to visit San Diego to purchase a property?
 No. QY Property manages the entire process remotely, including virtual property tours, remote closing via notarized documents, and ongoing property management. Many of our clients complete their entire investment without traveling to the U.S.
 
+### Does QY LLC offer software for landlords?
+Yes. QY LLC is launching a new product line of software apps that help landlords and property owners manage their properties more easily. The apps handle everyday tasks such as tracking tenants and leases, organizing rent and expenses, scheduling maintenance, and keeping property documents in one place. Information entered into the apps is treated as confidential, used only to operate and improve the product, and is never sold.
+
 ## Structured Entity Information
 
 - Organization Name: QY Property
+- Legal Entity: QY LLC
 - Brand Name: Quality Life, Yours
-- Type: Real Estate Investment Advisory
+- Type: Real Estate Investment Advisory; property-management software publisher
 - Specialization: Cross-border real estate (Taiwan → United States)
+- Product Lines: (1) Cross-border real estate investment advisory; (2) QY Landlord Apps — software for landlords to manage properties
 - Primary Market: San Diego, California
+- Office: 3600 Torrey View Ct, San Diego, CA 92130
+- Email: yufan@qyproperty.com
+- Privacy Policy: https://qyproperty.com/privacy
 - Languages: English, Traditional Chinese (繁體中文)
 - Service Model: End-to-end advisory and management
-- Target Clients: Taiwanese high-net-worth individuals and families
+- Target Clients: Taiwanese high-net-worth individuals and families; landlords and property owners

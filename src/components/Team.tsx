@@ -25,8 +25,8 @@ const team: Member[] = [
     zh: "跨國法律顧問",
   },
   {
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuD6ppqeG4jyrYlshJnTPvJiGeXrZBPWNAVmZbdz_5ZN_89G1gE_f-AYOCxFGREV203xco1dcV3odw7_b4frwK4Ku87k3Wkow_pTQfsa3kxNx81F_LiK_p35bev87jPbrLxkEmbCKoBlnMExf-LB5gSxVH7gO3Ig86wgyqXrfaFCx5ua4JuMXO59McTrrzb5Ew1iscYOn2RrLzQ-0bpoTt2ShGQ3TBZN2mOK3ScXspsDIRAdqp5zGIcnEfd2EVu7P9k-btJELoKaROQ",
-    name: "CPA",
+    img: "/avatar-placeholder.svg",
+    name: "Daniel Lu CPA",
     role: "Financial Planning",
     zh: "註冊會計師",
   },

@@ -1,26 +1,28 @@
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
+  "@id": "https://qyproperty.com/#organization",
   name: "QY Property",
+  legalName: "QY LLC",
   alternateName: "Quality Life, Yours",
   description:
-    "Cross-border real estate investment advisory helping Taiwanese families invest in San Diego, California residential properties. End-to-end services: strategy, acquisition, renovation, and property management.",
+    "Cross-border real estate investment advisory helping Taiwanese families invest in San Diego, California residential properties. End-to-end services: strategy, acquisition, renovation, and property management. QY LLC is also developing software apps to help landlords manage their properties.",
   url: "https://qyproperty.com",
-  logo: "https://qyproperty.com/logo.png",
-  image: "https://qyproperty.com/og-image.jpg",
-  telephone: "+1-858-555-0123",
+  logo: "https://qyproperty.com/icon.svg",
+  image: "https://qyproperty.com/apple-icon.png",
+  email: "yufan@qyproperty.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "1234 Coastal Ave, Suite 100",
-    addressLocality: "La Jolla",
+    streetAddress: "3600 Torrey View Ct",
+    addressLocality: "San Diego",
     addressRegion: "CA",
-    postalCode: "92037",
+    postalCode: "92130",
     addressCountry: "US",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 32.8328,
-    longitude: -117.2713,
+    latitude: 32.926,
+    longitude: -117.236,
   },
   areaServed: [
     {
@@ -30,6 +32,15 @@ const organizationSchema = {
     },
   ],
   knowsLanguage: ["en", "zh-Hant"],
+  knowsAbout: [
+    "Cross-border real estate investment",
+    "San Diego residential real estate",
+    "Taiwan to United States property investment",
+    "FIRPTA compliance",
+    "U.S. entity structuring (LLC and Trust)",
+    "Rental property management",
+    "Real estate tax advisory",
+  ],
   serviceType: [
     "Real Estate Investment Advisory",
     "Cross-Border Real Estate",
@@ -38,8 +49,29 @@ const organizationSchema = {
     "Renovation Services",
     "Tax Advisory",
   ],
+  makesOffer: {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "SoftwareApplication",
+      name: "QY Landlord Property Management Apps",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web, iOS, Android",
+      description:
+        "QY LLC's new product line of software apps that help landlords and property owners manage their properties — tracking tenants and leases, organizing rent and expenses, scheduling maintenance, and keeping documents in one place.",
+    },
+  },
   slogan: "Quality Life, Yours.",
   sameAs: [],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://qyproperty.com/#website",
+  name: "QY Property — Quality Life, Yours",
+  url: "https://qyproperty.com",
+  inLanguage: ["en", "zh-Hant"],
+  publisher: { "@id": "https://qyproperty.com/#organization" },
 };
 
 const faqSchema = {
@@ -124,6 +156,10 @@ export default function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
       <script
         type="application/ld+json"

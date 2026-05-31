@@ -47,8 +47,19 @@ QY Property (Quality Life, Yours) is an end-to-end real estate investment adviso
 
 "Quality Life, Yours." — We deliver strong financial returns while helping clients create a better lifestyle and future for their families through strategic real estate investment.
 
+## New Product Line: QY Landlord Apps
+
+QY LLC is expanding beyond advisory services with a new product line of software apps that help landlords and property owners manage their properties more easily. The apps cover tasks such as tracking tenants and leases, organizing rent and expenses, scheduling maintenance, and keeping property documents in one place. Data entered into the apps is treated as confidential, used only to operate and improve the product, and never sold.
+
+## Legal Entity
+
+QY Property is operated by QY LLC. "Quality Life, Yours" is a brand of QY LLC.
+
 ## Contact
 
-- Location: La Jolla, San Diego, CA 92037
+- Company: QY LLC
+- Office: 3600 Torrey View Ct, San Diego, CA 92130
+- Email: yufan@qyproperty.com
 - Website: https://qyproperty.com
+- Privacy Policy: https://qyproperty.com/privacy
 - Services available in: English, 繁體中文 (Traditional Chinese)
