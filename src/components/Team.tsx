@@ -25,7 +25,7 @@ const team: Member[] = [
     zh: "跨國法律顧問",
   },
   {
-    img: "/avatar-placeholder.svg",
+    img: "/daniel-lu-cpa.jpg",
     name: "Daniel Lu CPA",
     role: "Financial Planning",
     zh: "註冊會計師",
