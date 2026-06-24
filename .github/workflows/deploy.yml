@@ -1,39 +1,55 @@
-name: Deploy to Cloud Run
+name: Deploy to GitHub Pages
 
+# CI/CD: every push to main builds the Next.js static export and publishes
+# it to GitHub Pages (served on the custom domain in public/CNAME).
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
+  pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Authenticate to Google Cloud
-        uses: google-github-actions/auth@v3
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
+          node-version: 20
+          cache: npm
 
-      - name: Configure Docker for Artifact Registry
-        run: gcloud auth configure-docker asia-east1-docker.pkg.dev --quiet
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Build and push Docker image
-        run: |
-          IMAGE="asia-east1-docker.pkg.dev/qyproperty/qyproperty/web"
-          TAG_SHA="${GITHUB_SHA::7}"
-          docker build -t "${IMAGE}:${TAG_SHA}" -t "${IMAGE}:latest" .
-          docker push "${IMAGE}:${TAG_SHA}"
-          docker push "${IMAGE}:latest"
+      - name: Build static export
+        run: npm run build   # next build -> ./out (output: "export")
 
-      - name: Deploy to Cloud Run
-        uses: google-github-actions/deploy-cloudrun@v3
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          service: qyproperty
-          region: asia-east1
-          image: asia-east1-docker.pkg.dev/qyproperty/qyproperty/web:latest
-          flags: --port=3000 --allow-unauthenticated
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,5 +1,8 @@
 import type { MetadataRoute } from "next";
 
+// Pre-render at build time so it works with `output: "export"` (GitHub Pages).
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://qyproperty.com";
 
