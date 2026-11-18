@@ -18,7 +18,7 @@ export const META: Record<PageKey, Record<Lang, { title: string; description: st
     en: {
       title: "Cross-Border Real Estate Advisory Services | QY Property",
       description:
-        "What QY Property does for Taiwanese investors in San Diego: strategy, off-market sourcing, cross-border tax and legacy planning, renovation, acquisition and management.",
+        "QY Property for Taiwanese investors in San Diego: strategy, off-market sourcing, cross-border tax and legacy planning, renovation, acquisition and management.",
     },
     zh: {
       title: "服務項目｜聖地牙哥房地產跨境投資顧問｜QY Property",
