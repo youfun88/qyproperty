@@ -6,7 +6,7 @@ export const META: Record<PageKey, Record<Lang, { title: string; description: st
     en: {
       title: "San Diego Real Estate for Taiwanese Investors | QY Property",
       description:
-        "QY Property helps Taiwanese families invest in San Diego homes: investment strategy, property sourcing, acquisition, renovation and property management, in English and 繁體中文.",
+        "QY Property helps Taiwanese families invest in San Diego homes: strategy, sourcing, acquisition, renovation and property management, in English and 繁體中文.",
     },
     zh: {
       title: "QY Property｜台灣家庭投資聖地牙哥房地產的跨境顧問",
