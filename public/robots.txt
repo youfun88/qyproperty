@@ -1,47 +1,77 @@
 User-agent: *
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 # AI Crawlers — explicitly allowed
 User-agent: GPTBot
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 User-agent: Claude-User
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 User-agent: Amazonbot
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 User-agent: GoogleOther
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 User-agent: cohere-ai
 Allow: /
+Disallow: /pending
+Disallow: /log
 
 Sitemap: https://qyproperty.com/sitemap.xml
