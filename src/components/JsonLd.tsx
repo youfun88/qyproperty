@@ -95,3 +95,57 @@ export function servicesLd(lang: Lang) {
     url: absUrl(lang, "services"),
   };
 }
+
+/**
+ * Team page: the people shown on /team/, with the roles shown there. Jean Riley's
+ * licence is checked on the DRE public licence lookup (salesperson #02004228,
+ * responsible broker Jeanify, Inc. #02414799; checked 2026-11-19).
+ */
+export function teamLd(lang: Lang) {
+  const zh = lang === "zh";
+  const person = (name: string, en: string, zhRole: string, img: string, extra: object = {}) => ({
+    "@type": "Person",
+    name,
+    jobTitle: zh ? zhRole : en,
+    image: `${SITE_URL}${img}`,
+    ...extra,
+  });
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: "QY Property",
+    url: absUrl(lang, "home"),
+    member: [
+      person("Yufan Chen", "Investment Strategy", "資產配置專家", "/img/team-yufan-chen-face-v3.webp"),
+      person("Queenie Wu", "Compliance & Tax", "跨國法律顧問", "/img/team-queenie-wu.webp"),
+      person("Daniel Lu CPA", "Financial Planning", "註冊會計師", "/img/team-daniel-lu-cpa.webp"),
+      person("Jean Riley", "Professional Real Estate Consultant", "當地資深經紀人", "/img/team-jean-riley.webp", {
+        telephone: "+1-858-598-3888",
+        worksFor: {
+          "@type": "RealEstateAgent",
+          name: "Jeanify, Inc.",
+          telephone: "+1-858-598-3888",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "9888 Carroll Centre Rd, Ste 200",
+            addressLocality: "San Diego",
+            addressRegion: "CA",
+            postalCode: "92126",
+            addressCountry: "US",
+          },
+        },
+        hasCredential: {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "license",
+          name: "California real estate salesperson license #02004228",
+          recognizedBy: {
+            "@type": "GovernmentOrganization",
+            name: "California Department of Real Estate",
+            url: "https://www.dre.ca.gov/",
+          },
+        },
+      }),
+    ],
+  };
+}

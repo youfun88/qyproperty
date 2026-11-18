@@ -1,5 +1,6 @@
 import PageShell, { PageHero } from "@/components/PageShell";
 import Team from "@/components/Team";
+import JsonLd, { teamLd } from "@/components/JsonLd";
 import FinalCTA from "@/components/FinalCTA";
 import type { Lang } from "@/lib/site";
 
@@ -7,6 +8,7 @@ export default function TeamView({ lang }: { lang: Lang }) {
   const zh = lang === "zh";
   return (
     <PageShell lang={lang} page="team">
+      <JsonLd data={teamLd(lang)} />
       <PageHero
         lang={lang}
         page="team"
