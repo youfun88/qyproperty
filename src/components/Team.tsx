@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { Lang } from "@/lib/site";
 
 type Member = {
   img: string;
@@ -11,27 +12,28 @@ type Member = {
   office?: string;
 };
 
+// Bios exactly as on the original site.
 const team: Member[] = [
   {
-    img: "/yufan-chen-face-v3.jpg",
+    img: "/img/team-yufan-chen-face-v3.webp",
     name: "Yufan Chen",
     role: "Investment Strategy",
     zh: "資產配置專家",
   },
   {
-    img: "/queenie-wu.jpg",
+    img: "/img/team-queenie-wu.webp",
     name: "Queenie Wu",
     role: "Compliance & Tax",
     zh: "跨國法律顧問",
   },
   {
-    img: "/daniel-lu-cpa.jpg",
+    img: "/img/team-daniel-lu-cpa.webp",
     name: "Daniel Lu CPA",
     role: "Financial Planning",
     zh: "註冊會計師",
   },
   {
-    img: "/jean-riley.jpg",
+    img: "/img/team-jean-riley.webp",
     name: "Jean Riley",
     role: "Professional Real Estate Consultant",
     zh: "當地資深經紀人",
@@ -41,22 +43,25 @@ const team: Member[] = [
   },
 ];
 
-export default function Team() {
+export default function Team({ lang = "en", title }: { lang?: Lang; title?: string }) {
+  const zh = lang === "zh";
   return (
     <section className="py-24 px-6 md:px-16 bg-white">
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h2 className="text-3xl font-extrabold text-primary mb-4">
-          Your Professional Council
+          {title ?? (zh ? "一站式專家顧問團" : "Your Professional Council")}
           <br />
-          <span className="text-secondary font-medium text-xl">一站式專家顧問團</span>
+          <span className="text-secondary font-medium text-xl">
+            {zh ? "Your Professional Council" : "一站式專家顧問團"}
+          </span>
         </h2>
         <p className="text-on-surface-variant max-w-2xl mx-auto">
           我們與頂尖的法律、財務及地產專家緊密合作，確保您的投資每一步都穩健無虞。
         </p>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <ul className="grid grid-cols-2 lg:grid-cols-4 gap-8">
         {team.map((m) => (
-          <div key={m.name} className="text-center group">
+          <li key={m.name} className="text-center group">
             <div className="w-32 h-32 mx-auto rounded-full bg-surface-container overflow-hidden mb-4 border-2 border-transparent group-hover:border-secondary transition-all">
               <Image
                 src={m.img}
@@ -66,10 +71,10 @@ export default function Team() {
                 className={`w-full h-full object-cover ${m.imgClassName ?? ""}`}
               />
             </div>
-            <h5 className="font-bold text-primary">{m.name}</h5>
+            <h3 className="font-bold text-primary font-[family-name:var(--font-body)]">{m.name}</h3>
             <p className="text-xs text-secondary font-bold mb-1">{m.role}</p>
             <p className="text-xs text-on-surface-variant">{m.zh}</p>
-            {"dre" in m && m.dre && m.phone && (
+            {m.dre && m.phone && (
               <div className="mt-2 space-y-0.5 text-[11px] text-on-surface-variant">
                 <p>{m.dre}</p>
                 <p>
@@ -79,9 +84,9 @@ export default function Team() {
                 </p>
               </div>
             )}
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

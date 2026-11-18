@@ -1,10 +1,8 @@
-export default function Logo({ className = "" }: { className?: string }) {
+import { href, type Lang } from "@/lib/site";
+
+export default function Logo({ className = "", lang = "en" }: { className?: string; lang?: Lang }) {
   return (
-    <a
-      href="/"
-      aria-label="QY LLC — Quality Life, Yours"
-      className={`group flex items-center gap-3 ${className}`}
-    >
+    <a href={href(lang, "home")} className={`group flex items-center gap-3 ${className}`}>
       <svg
         width="42"
         height="42"
@@ -15,13 +13,7 @@ export default function Logo({ className = "" }: { className?: string }) {
         className="shrink-0"
       >
         {/* Q — outer ring */}
-        <circle
-          cx="24"
-          cy="24"
-          r="18.5"
-          stroke="#0b1c30"
-          strokeWidth="2.4"
-        />
+        <circle cx="24" cy="24" r="18.5" stroke="#0b1c30" strokeWidth="2.4" />
         {/* Q — gold tail crossing the ring */}
         <path
           d="M30.5 30.5 L40 40"
@@ -40,7 +32,8 @@ export default function Logo({ className = "" }: { className?: string }) {
         />
       </svg>
 
-      <span className="flex flex-col leading-none">
+      {/* Visible text is the link's accessible name: "Quality Life, Yours QY LLC". */}
+      <span className="flex flex-col leading-none" lang="en">
         <span className="text-2xl font-bold tracking-tighter text-on-surface font-[family-name:var(--font-manrope)]">
           Quality Life, Yours
         </span>

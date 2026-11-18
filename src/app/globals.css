@@ -44,14 +44,26 @@
   --font-body: "Inter", sans-serif;
 }
 
-body {
-  font-family: var(--font-body);
-  background: var(--color-surface);
-  color: var(--color-on-surface);
-}
+/* In the base layer so utility classes (e.g. a body-font h3) can override. */
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background: var(--color-surface);
+    color: var(--color-on-surface);
+  }
 
-h1, h2, h3, .brand-font {
-  font-family: var(--font-headline);
+  h1, h2, h3, .brand-font {
+    font-family: var(--font-headline);
+  }
+
+  /* Traditional Chinese pages: Taiwan system fonts after the Latin faces. */
+  html:lang(zh-Hant) body {
+    font-family: "Inter", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  }
+  html:lang(zh-Hant) :is(h1, h2, h3, .brand-font) {
+    font-family: "Manrope", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  }
+
 }
 
 .glass-nav {
@@ -61,4 +73,27 @@ h1, h2, h3, .brand-font {
 .chinese-text {
   line-height: 1.6;
   font-size: 0.95em;
+}
+
+/* Inline SVG icons (components/Icon.tsx), matching the Google icon-font
+   stylesheet they replace: size and line-height are unlayered (they beat
+   utilities such as text-4xl, as the old stylesheet did), while display stays
+   overridable by utilities like `block` (see @layer base below). */
+.msi {
+  font-size: 24px;
+  line-height: 1;
+  width: 1em;
+  flex-shrink: 0;
+  white-space: nowrap;
+  direction: ltr;
+}
+.msi > svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+@layer base {
+  .msi {
+    display: inline-block;
+  }
 }
