@@ -30,7 +30,7 @@ export const META: Record<PageKey, Record<Lang, { title: string; description: st
     en: {
       title: "San Diego Real Estate Market Insights | QY Property",
       description:
-        "Why San Diego for Taiwanese investors: UCSD, the biotech sector and the climate, rental demand, housing near top universities for your children, and a client result.",
+        "Why San Diego for Taiwanese investors: UCSD, biotech and the climate, rental demand, housing near top universities for your children, and a client result.",
     },
     zh: {
       title: "聖地牙哥房市洞察｜QY Property",
