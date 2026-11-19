@@ -74,4 +74,16 @@ export const META: Record<PageKey, Record<Lang, { title: string; description: st
         "QY LLC 如何在 QY Property 顧問網站及房東物業管理 App 中蒐集、使用與保護您的個人資料。",
     },
   },
+  buyFromTaiwan: {
+    en: {
+      title: "Buying a San Diego Home from Taiwan | QY Property",
+      description:
+        "You can buy a San Diego home while living in Taiwan. The steps, which California-licensed professionals you need, ITIN, FIRPTA on a sale, and how QY helps.",
+    },
+    zh: {
+      title: "人在台灣，怎麼遠端買聖地牙哥的房子？｜QY Property",
+      description:
+        "人在台灣也能買聖地牙哥的房子。看懂遠端買房的步驟、需要哪些加州持照專業人士、ITIN 與出售時的 FIRPTA 預扣稅，以及 QY Property 如何用中文協助。",
+    },
+  },
 };

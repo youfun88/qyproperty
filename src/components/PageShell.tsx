@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { breadcrumbLd, href, PAGE_NAMES, type Lang, type PageKey } from "@/lib/site";
+import { breadcrumbLd, href, PAGE_NAMES, PARENT, type Lang, type PageKey } from "@/lib/site";
 
 /** Header + main + footer. Sub-pages also get a BreadcrumbList. */
 export default function PageShell({
@@ -39,13 +39,23 @@ export function PageHero({
     <div className="bg-primary py-20 px-6 md:px-16">
       <div className="max-w-3xl mx-auto text-center">
         <nav aria-label={lang === "zh" ? "麵包屑導覽" : "Breadcrumb"} className="mb-6">
-          <ol className="flex justify-center gap-2 text-sm text-surface-variant/80">
+          <ol className="flex flex-wrap justify-center gap-2 text-sm text-surface-variant/80">
             <li>
               <a href={href(lang, "home")} className="hover:text-secondary-fixed-dim">
                 {PAGE_NAMES.home[lang]}
               </a>
             </li>
             <li aria-hidden="true">/</li>
+            {PARENT[page] && (
+              <>
+                <li>
+                  <a href={href(lang, PARENT[page] as PageKey)} className="hover:text-secondary-fixed-dim">
+                    {PAGE_NAMES[PARENT[page] as PageKey][lang]}
+                  </a>
+                </li>
+                <li aria-hidden="true">/</li>
+              </>
+            )}
             <li aria-current="page" className="text-white">
               {PAGE_NAMES[page][lang]}
             </li>

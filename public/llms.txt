@@ -8,6 +8,7 @@ English:
 - [Home](https://qyproperty.com/): Overview — services, the four-step process, San Diego market trends, investment tiers, a client result, the team and the FAQ.
 - [Services](https://qyproperty.com/services/): Strategy, sourcing, cross-border tax and legacy advisory, renovation; why clients choose QY; the four-step process; the three investment tiers.
 - [San Diego Market Insights](https://qyproperty.com/insights/): Average yield, appreciation and rental demand; why San Diego; buying near your child's university; a client result.
+- [Buying a San Diego Home from Taiwan](https://qyproperty.com/insights/buy-san-diego-home-from-taiwan/): Article. Steps to buy remotely, which California-licensed professionals do what (agent, escrow, inspector, CPA, attorney, property manager), ITIN, FIRPTA withholding on a later sale (IRS sources), and how QY helps. General information, not legal or tax advice.
 - [Team](https://qyproperty.com/team/): Yufan Chen (Investment Strategy), Queenie Wu (Compliance & Tax), Daniel Lu CPA (Financial Planning), Jean Riley (Professional Real Estate Consultant).
 - [FAQ](https://qyproperty.com/faq/): Six questions Taiwanese investors ask, answered in full.
 - [Privacy Policy](https://qyproperty.com/privacy/)
@@ -16,6 +17,7 @@ English:
 - [首頁](https://qyproperty.com/zh/)：服務總覽、投資流程、聖地牙哥市場洞察、服務方案、成交實績、專家團隊與常見問題。
 - [服務項目](https://qyproperty.com/zh/services/)：投資策略、精選房源、跨國稅務與傳承規劃、增值翻修、投資流程與三種服務方案。
 - [市場洞察](https://qyproperty.com/zh/insights/)：聖地牙哥租金投報率、增值與租屋需求，為留學的孩子置產。
+- [人在台灣，怎麼遠端買聖地牙哥的房子？](https://qyproperty.com/zh/insights/buy-san-diego-home-from-taiwan/)：文章。遠端買房的步驟、各類加州持照專業人士的分工、ITIN、出售時的 FIRPTA 預扣稅（依 IRS 資料），以及 QY 如何協助。一般資訊，非法律或稅務建議。
 - [專家團隊](https://qyproperty.com/zh/team/)：一站式專家顧問團。
 - [常見問題](https://qyproperty.com/zh/faq/)：台灣投資者最常問的六個問題與完整解答。
 - [隱私權政策](https://qyproperty.com/zh/privacy/)

@@ -132,29 +132,7 @@ document.querySelector('.tab-close').addEventListener('click',function(){
 -->
 <h2><span lang="zh-Hant">等待同意</span><span lang="en">Waiting for approval</span></h2>
 
-<div class="item" data-item="[Yufan] Home (en): shorter meta description" data-type="setting" data-page="Home" data-page-zh="首頁" data-status="approved" data-approved="2026-11-19">
-<h3>[Yufan] Home (en): shorter meta description</h3>
-<p lang="zh-Hant">網站健檢（2026-11-18）：首頁英文的 meta description 有 173 個字元，超過 Google 約 155–160 字元的顯示長度，結尾會被截掉。縮短到 153 字元，意思不變。中文版不受影響。分支：seo/home-meta-description。</p>
-<p lang="en">Site health check (2026-11-18): the English home page meta description is 173 characters, over the ~155–160 Google shows, so the end is cut off. Shortened to 153 characters, same meaning. The Chinese page is unchanged. Branch: seo/home-meta-description.</p>
-<ul><li><strong lang="zh-Hant">位置：</strong><strong lang="en">Where:</strong> <code>src/content/meta.ts</code> home.en.description<span class="ba was"><b>Before</b>QY Property helps Taiwanese families invest in San Diego homes: investment strategy, property sourcing, acquisition, renovation and property management, in English and 繁體中文.</span><span class="ba now"><b>After</b>QY Property helps Taiwanese families invest in San Diego homes: strategy, sourcing, acquisition, renovation and property management, in English and 繁體中文.</span></li></ul>
-<div class="links"><a href="https://qyproperty.com/" target="_blank" rel="noopener">Live page</a><a href="https://github.com/youfun88/qyproperty/compare/main...seo/home-meta-description" target="_blank" rel="noopener">Diff</a></div>
-</div>
-
-<div class="item" data-item="[Yufan] Services (en): shorter meta description" data-type="setting" data-page="Services" data-page-zh="服務項目" data-status="approved" data-approved="2026-11-19">
-<h3>[Yufan] Services (en): shorter meta description</h3>
-<p lang="zh-Hant">同一個問題：服務項目英文頁的 meta description 有 168 個字元，會被截斷。縮短到 158 字元，列出的服務（包括「cross-border tax and legacy planning」原文）都保留，沒有新增或刪除任何說法。分支：seo/services-meta-description。</p>
-<p lang="en">Same issue: the English services page meta description is 168 characters and gets cut off. Shortened to 158 characters; every service listed (including the existing "cross-border tax and legacy planning" wording) is kept, nothing added or removed. Branch: seo/services-meta-description.</p>
-<ul><li><strong lang="zh-Hant">位置：</strong><strong lang="en">Where:</strong> <code>src/content/meta.ts</code> services.en.description<span class="ba was"><b>Before</b>What QY Property does for Taiwanese investors in San Diego: strategy, off-market sourcing, cross-border tax and legacy planning, renovation, acquisition and management.</span><span class="ba now"><b>After</b>QY Property for Taiwanese investors in San Diego: strategy, off-market sourcing, cross-border tax and legacy planning, renovation, acquisition and management.</span></li></ul>
-<div class="links"><a href="https://qyproperty.com/services/" target="_blank" rel="noopener">Live page</a><a href="https://github.com/youfun88/qyproperty/compare/main...seo/services-meta-description" target="_blank" rel="noopener">Diff</a></div>
-</div>
-
-<div class="item" data-item="[Yufan] Team: Person schema with Jean Riley's DRE license" data-type="setting" data-page="Team" data-page-zh="專家團隊" data-status="approved" data-approved="2026-11-19">
-<h3>[Yufan] Team: Person schema with Jean Riley's DRE license</h3>
-<p lang="zh-Hant">AI 檢查（2026-11-18）：5 個問題、20 個回答裡 QY Property 被提到 0 次；被提到最多的是 Rannie Huang Greer（4 次）。研究被引用的頁面（ranniegreer.com、kendrarealtor.com）後發現，它們都清楚寫出經紀人的姓名和 DRE 執照號碼，kendrarealtor.com 還放在結構化資料裡。我們的團隊頁只有畫面上的文字，沒有任何結構化資料。這次在 /team/ 和 /zh/team/ 加上 Organization.member 四位成員（Person，職稱照頁面上的寫法），Jean Riley 加上 DRE 執照 #02004228 與所屬經紀公司 Jeanify, Inc.（2026-11-19 在 DRE 公開查詢確認有效）。畫面文字不變。分支：seo/team-person-schema。</p>
-<p lang="en">AI check (2026-11-18): QY Property was named in 0 of 20 answers across the 5 questions; Rannie Huang Greer led with 4. The pages AI cited (ranniegreer.com, kendrarealtor.com) state the agent's name and DRE licence number, and kendrarealtor.com has them in structured data. Our team page had no structured data at all. Added Organization.member with the four people (Person, job titles exactly as shown on the page) on /team/ and /zh/team/, and Jean Riley's DRE licence #02004228 with her broker Jeanify, Inc. (checked active on the DRE public lookup, 2026-11-19). No visible text changes. Branch: seo/team-person-schema.</p>
-<ul><li><strong lang="zh-Hant">位置：</strong><strong lang="en">Where:</strong> /team/, /zh/team/ JSON-LD<span class="ba was"><b>Before</b>BreadcrumbList only</span><span class="ba now"><b>After</b>BreadcrumbList + Organization (QY Property) with member: Yufan Chen, Queenie Wu, Daniel Lu CPA, Jean Riley (hasCredential: California real estate salesperson license #02004228, recognizedBy California Department of Real Estate; worksFor Jeanify, Inc.)</span></li></ul>
-<div class="links"><a href="https://qyproperty.com/team/" target="_blank" rel="noopener">Live page</a><a href="https://github.com/youfun88/qyproperty/compare/main...seo/team-person-schema" target="_blank" rel="noopener">Diff</a></div>
-</div>
+<!-- items -->
 
 <script>
 (function(){

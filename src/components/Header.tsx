@@ -16,7 +16,7 @@ export default function Header({ lang, page }: { lang: Lang; page: PageKey }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   // The home page keeps its original look (Services underlined).
   const active: PageKey | null =
-    page === "home" || page === "services" ? "services" : page === "insights" ? "insights" : null;
+    page === "home" || page === "services" ? "services" : page === "insights" || page === "buyFromTaiwan" ? "insights" : null;
 
   const activeCls =
     "text-on-surface border-b-2 border-gold pb-1 font-[family-name:var(--font-manrope)] font-semibold tracking-tight";

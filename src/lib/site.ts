@@ -6,7 +6,14 @@ export const SITE_URL = "https://qyproperty.com";
 export const CALENDLY_URL = "https://calendly.com/yufansapp/30min";
 export const OG_IMAGE = `${SITE_URL}/img/og-qyproperty.jpg`;
 
-export type PageKey = "home" | "services" | "insights" | "team" | "faq" | "privacy";
+export type PageKey =
+  | "home"
+  | "services"
+  | "insights"
+  | "team"
+  | "faq"
+  | "privacy"
+  | "buyFromTaiwan";
 
 /** Path of each page in English. The Traditional Chinese twin lives under /zh. */
 export const PATHS: Record<PageKey, string> = {
@@ -16,6 +23,12 @@ export const PATHS: Record<PageKey, string> = {
   team: "/team/",
   faq: "/faq/",
   privacy: "/privacy/",
+  buyFromTaiwan: "/insights/buy-san-diego-home-from-taiwan/",
+};
+
+/** Articles sit under a section page; the breadcrumb shows Home › Section › Article. */
+export const PARENT: Partial<Record<PageKey, PageKey>> = {
+  buyFromTaiwan: "insights",
 };
 
 export const PAGE_KEYS = Object.keys(PATHS) as PageKey[];
@@ -36,6 +49,7 @@ export const PAGE_NAMES: Record<PageKey, Record<Lang, string>> = {
   team: { en: "Team", zh: "專家團隊" },
   faq: { en: "FAQ", zh: "常見問題" },
   privacy: { en: "Privacy Policy", zh: "隱私權政策" },
+  buyFromTaiwan: { en: "Buying a San Diego home from Taiwan", zh: "遠端買聖地牙哥的房子" },
 };
 
 /**
@@ -85,22 +99,15 @@ export function pageMetadata({
 }
 
 export function breadcrumbLd(lang: Lang, page: PageKey) {
+  const trail: PageKey[] = ["home", ...(PARENT[page] ? [PARENT[page] as PageKey] : []), page];
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: PAGE_NAMES.home[lang],
-        item: absUrl(lang, "home"),
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: PAGE_NAMES[page][lang],
-        item: absUrl(lang, page),
-      },
-    ],
+    itemListElement: trail.map((k, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: PAGE_NAMES[k][lang],
+      item: absUrl(lang, k),
+    })),
   };
 }

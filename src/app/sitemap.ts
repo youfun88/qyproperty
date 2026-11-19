@@ -11,6 +11,7 @@ const SETTINGS: Record<PageKey, { changeFrequency: "weekly" | "monthly" | "yearl
   team: { changeFrequency: "monthly", priority: 0.7 },
   faq: { changeFrequency: "monthly", priority: 0.8 },
   privacy: { changeFrequency: "yearly", priority: 0.3 },
+  buyFromTaiwan: { changeFrequency: "monthly", priority: 0.7 },
 };
 
 /** Every public page in both languages, each with en / zh-Hant / x-default alternates. */
