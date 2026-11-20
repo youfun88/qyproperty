@@ -5,7 +5,7 @@ import TrustPillars from "@/components/TrustPillars";
 import Process from "@/components/Process";
 import PricingTiers from "@/components/PricingTiers";
 import FinalCTA from "@/components/FinalCTA";
-import type { Lang } from "@/lib/site";
+import { href, type Lang } from "@/lib/site";
 
 export default function ServicesView({ lang }: { lang: Lang }) {
   const zh = lang === "zh";
@@ -29,6 +29,16 @@ export default function ServicesView({ lang }: { lang: Lang }) {
       />
       <TrustPillars lang={lang} title={zh ? "為什麼選擇 QY Property？" : "Why work with QY Property?"} />
       <Process lang={lang} title={zh ? "投資流程如何進行？" : "How does the investment process work?"} />
+      <section className="px-6 md:px-16 pb-16 bg-surface">
+        <div className="max-w-3xl mx-auto bg-surface-container-low rounded-xl p-6 md:p-8">
+          <h2 className="text-lg font-bold text-primary mb-2">{zh ? "延伸閱讀" : "Further reading"}</h2>
+          <a href={href(lang, "buyFromTaiwan")} className="text-secondary font-semibold underline">
+            {zh
+              ? "人在台灣，怎麼遠端買聖地牙哥的房子？流程與分工"
+              : "Buying a San Diego home from Taiwan: steps and who does what"}
+          </a>
+        </div>
+      </section>
       <PricingTiers lang={lang} title={zh ? "哪一種方案適合您？" : "Which investment tier fits you?"} />
       <FinalCTA lang={lang} />
     </PageShell>
