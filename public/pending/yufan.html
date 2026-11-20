@@ -100,7 +100,7 @@ document.querySelector('.tab-close').addEventListener('click',function(){
 <h1>開發者審閱 · SEO / AEO / GEO</h1>
 <p lang="zh-Hant">給 Yufan 同意的搜尋與 AI 能見度修改：標題、描述、結構化資料、內部連結、llms.txt、sitemap、關鍵字。內容修改請到 <a href="/pending/">/pending</a>。這個頁面不會從網站連過來，也不會被搜尋引擎收錄。GX10 會在下一次更新時套用已同意的修改（每天一次）。</p>
 <p lang="en">Search and AI-visibility changes for Yufan to approve: titles, descriptions, schema, internal links, llms.txt, sitemap, keywords. Content changes go to <a href="/pending/">/pending</a>. Not linked from the site and not indexed. The GX10 job applies approved changes at its next run (once a day).</p>
-<p class="updated"><span lang="zh-Hant">更新日期：2026-11-20</span><span lang="en">Updated 2026-11-20.</span></p>
+<p class="updated"><span lang="zh-Hant">更新日期：2026-11-21</span><span lang="en">Updated 2026-11-21.</span></p>
 
 <!-- review-ui (/pending/review-ui.js + .css, shared by /pending and /pending/yufan):
   - Language: an EN / 中文 switch shows one language. Write every explanation, note, label and question twice, each in
@@ -133,20 +133,12 @@ document.querySelector('.tab-close').addEventListener('click',function(){
 <h2><span lang="zh-Hant">等待同意</span><span lang="en">Waiting for approval</span></h2>
 
 <!-- items -->
-<div class="item" data-item="[Yufan] Insights (en): shorter meta description" data-type="setting" data-page="Insights" data-page-zh="市場洞察" data-status="approved" data-approved="2026-11-20">
-<h3>[Yufan] Insights (en): shorter meta description</h3>
-<p lang="zh-Hant">網站健檢（2026-11-20）把首頁的長描述列為警告；同樣的問題也在市場洞察英文頁：meta description 有 165 個字元，超過 Google 約 155–160 字元的顯示長度。縮短到 154 字元，只把「the biotech sector」改成「biotech」，其他說法不變。中文版不受影響。分支：seo/insights-meta-description。</p>
-<p lang="en">Site health check (2026-11-20) flags long meta descriptions; the English Insights page has the same issue at 165 characters, over the ~155–160 Google shows. Shortened to 154 characters by changing "the biotech sector" to "biotech"; nothing else changes. The Chinese page is unchanged. Branch: seo/insights-meta-description.</p>
-<ul><li><strong lang="zh-Hant">位置：</strong><strong lang="en">Where:</strong> <code>src/content/meta.ts</code> insights.en.description<span class="ba was"><b>Before</b>Why San Diego for Taiwanese investors: UCSD, the biotech sector and the climate, rental demand, housing near top universities for your children, and a client result.</span><span class="ba now"><b>After</b>Why San Diego for Taiwanese investors: UCSD, biotech and the climate, rental demand, housing near top universities for your children, and a client result.</span></li></ul>
-<div class="links"><a href="https://qyproperty.com/insights/" target="_blank" rel="noopener">Live page</a><a href="https://github.com/youfun88/qyproperty/compare/main...seo/insights-meta-description" target="_blank" rel="noopener">Diff</a></div>
-</div>
-
-<div class="item" data-item="[Yufan] FAQ: link to the remote-buying article" data-type="setting" data-page="FAQ" data-page-zh="常見問題" data-status="approved" data-approved="2026-11-20">
-<h3>[Yufan] FAQ: link to the remote-buying article</h3>
-<p lang="zh-Hant">AI 檢查（2026-11-18）第 1 題「人在台灣，想遠端買聖地牙哥的房子，有推薦的房仲嗎？」：4 個回答裡 QY 被提到 0 次，也沒有被引用。今天上線的文章〈人在台灣，怎麼遠端買聖地牙哥的房子？〉就是回答這一題。常見問題頁已經有「不必親自赴美也能購屋」這一題，但沒有連到文章；在常見問題下方加一個「延伸閱讀」連結（中英文各一），讓搜尋引擎和 AI 從相關頁面找到文章。常見問題的文字不變。分支：seo/faq-related-article。</p>
-<p lang="en">AI check (2026-11-18) question 1, "人在台灣，想遠端買聖地牙哥的房子，有推薦的房仲嗎？": QY named in 0 of 4 answers, not cited. Today's new article answers exactly that. The FAQ page already covers buying without visiting but doesn't link to the article, so this adds a "Further reading" link below the FAQ (en and zh) to help search engines and AI find it from a related page. FAQ wording unchanged. Branch: seo/faq-related-article.</p>
-<ul><li><strong lang="zh-Hant">位置：</strong><strong lang="en">Where:</strong> /faq/, /zh/faq/<span class="ba was"><b>Before</b>No link to the article</span><span class="ba now"><b>After</b>延伸閱讀 / Further reading: 人在台灣，怎麼遠端買聖地牙哥的房子？流程與分工 / Buying a San Diego home from Taiwan: steps and who does what</span></li></ul>
-<div class="links"><a href="https://qyproperty.com/faq/" target="_blank" rel="noopener">Live page</a><a href="https://github.com/youfun88/qyproperty/compare/main...seo/faq-related-article" target="_blank" rel="noopener">Diff</a></div>
+<div class="item" data-item="[Yufan] Services: link to the remote-buying article" data-type="setting" data-page="Services" data-page-zh="服務項目" data-status="approved" data-approved="2026-11-21">
+<h3>[Yufan] Services: link to the remote-buying article</h3>
+<p lang="zh-Hant">AI 檢查（2026-11-18）第 1 題「人在台灣，想遠端買聖地牙哥的房子，有推薦的房仲嗎？」：4 個回答裡 QY 被提到 0 次，也沒有被引用。回答這一題的文章已經上線，常見問題頁也已經連過去（2026-11-21 上線）。服務項目頁的「投資流程如何進行？」講的是同一件事，卻沒有連到文章；在流程下方加一個「延伸閱讀」連結（中英文各一），讓搜尋引擎和 AI 從主要服務頁找到文章。服務頁的文字不變。分支：seo/services-related-article。</p>
+<p lang="en">AI check (2026-11-18) question 1, "人在台灣，想遠端買聖地牙哥的房子，有推薦的房仲嗎？": QY named in 0 of 4 answers, not cited. The article that answers it is live and the FAQ now links to it (live 2026-11-21). The Services page's "How does the investment process work?" covers the same ground but doesn't link to it, so this adds a "Further reading" link below the process (en and zh), so search engines and AI reach the article from the main service page. Services wording unchanged. Branch: seo/services-related-article.</p>
+<ul><li><strong lang="zh-Hant">位置：</strong><strong lang="en">Where:</strong> /services/, /zh/services/<span class="ba was"><b>Before</b>No link to the article</span><span class="ba now"><b>After</b>延伸閱讀 / Further reading: 人在台灣，怎麼遠端買聖地牙哥的房子？流程與分工 / Buying a San Diego home from Taiwan: steps and who does what</span></li></ul>
+<div class="links"><a href="https://qyproperty.com/services/" target="_blank" rel="noopener">Live page</a><a href="https://github.com/youfun88/qyproperty/compare/main...seo/services-related-article" target="_blank" rel="noopener">Diff</a></div>
 </div>
 
 <script>
