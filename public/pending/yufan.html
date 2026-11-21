@@ -100,7 +100,7 @@ document.querySelector('.tab-close').addEventListener('click',function(){
 <h1>開發者審閱 · SEO / AEO / GEO</h1>
 <p lang="zh-Hant">給 Yufan 同意的搜尋與 AI 能見度修改：標題、描述、結構化資料、內部連結、llms.txt、sitemap、關鍵字。內容修改請到 <a href="/pending/">/pending</a>。這個頁面不會從網站連過來，也不會被搜尋引擎收錄。GX10 會在下一次更新時套用已同意的修改（每天一次）。</p>
 <p lang="en">Search and AI-visibility changes for Yufan to approve: titles, descriptions, schema, internal links, llms.txt, sitemap, keywords. Content changes go to <a href="/pending/">/pending</a>. Not linked from the site and not indexed. The GX10 job applies approved changes at its next run (once a day).</p>
-<p class="updated"><span lang="zh-Hant">更新日期：2026-11-21</span><span lang="en">Updated 2026-11-21.</span></p>
+<p class="updated"><span lang="zh-Hant">更新日期：2026-11-22</span><span lang="en">Updated 2026-11-22.</span></p>
 
 <!-- review-ui (/pending/review-ui.js + .css, shared by /pending and /pending/yufan):
   - Language: an EN / 中文 switch shows one language. Write every explanation, note, label and question twice, each in
@@ -133,6 +133,20 @@ document.querySelector('.tab-close').addEventListener('click',function(){
 <h2><span lang="zh-Hant">等待同意</span><span lang="en">Waiting for approval</span></h2>
 
 <!-- items -->
+<div class="item" data-item="[Yufan] llms-full.txt: add the remote-buying article" data-type="setting" data-page="llms-full.txt" data-page-zh="llms-full.txt" data-status="approved" data-approved="2026-11-22">
+<h3>[Yufan] llms-full.txt: add the remote-buying article</h3>
+<p lang="zh-Hant">AI 檢查（2026-11-18）：20 個回答裡 QY 被提到 0 次（第 1 題「人在台灣，想遠端買聖地牙哥的房子，有推薦的房仲嗎？」0/4）。llms.txt 已經列出遠端買房文章，但給 AI 讀的完整版 llms-full.txt 還沒有。在檔案最後加一段「Articles」，寫出文章網址（中英文）和一段摘要，讓 AI 工具讀到這份檔案時也能找到文章。不改動檔案裡原有的文字（包括等待 Yufan 決定的用詞）。分支：seo/llms-full-article。</p>
+<p lang="en">AI check (2026-11-18): QY named in 0 of 20 answers (question 1, "人在台灣，想遠端買聖地牙哥的房子，有推薦的房仲嗎？", 0/4). llms.txt already lists the remote-buying article; the full llms-full.txt that AI tools read does not. This appends an "Articles" section with the article's URLs (en + zh) and a short summary. Existing text, including the wording waiting on Yufan, is unchanged. Branch: seo/llms-full-article.</p>
+<ul><li><strong lang="zh-Hant">位置：</strong><strong lang="en">Where:</strong> /llms-full.txt<span class="ba was"><b>Before</b>No Articles section</span><span class="ba now"><b>After</b>## Articles · ### Buying a San Diego Home from Taiwan: steps and who does what · URL + summary (steps, licensed professionals, ITIN, FIRPTA on a later sale; not legal or tax advice)</span></li></ul>
+<div class="links"><a href="https://qyproperty.com/llms-full.txt" target="_blank" rel="noopener">Live file</a><a href="https://github.com/youfun88/qyproperty/compare/main...seo/llms-full-article" target="_blank" rel="noopener">Diff</a></div>
+</div>
+<div class="item" data-item="[Yufan] Home: link to the remote-buying article" data-type="setting" data-page="Home" data-page-zh="首頁" data-status="approved" data-approved="2026-11-22">
+<h3>[Yufan] Home: link to the remote-buying article</h3>
+<p lang="zh-Hant">AI 檢查（2026-11-18）第 1 題 0/4、第 5 題「Which San Diego real estate advisor helps Taiwanese families invest in property?」0/4，網站都沒有被引用。首頁是 Google 唯一有曝光的頁面（Search Console 28 天 6 次曝光），但沒有連到回答第 1 題的文章。常見問題頁和服務項目頁已經連過去；這裡在首頁「流程」下方加同樣的「延伸閱讀」連結（中英文各一）。首頁文字不變。分支：seo/home-related-article。</p>
+<p lang="en">AI check (2026-11-18) question 1 0/4 and question 5, "Which San Diego real estate advisor helps Taiwanese families invest in property?", 0/4, site never cited. The home page is the only page with Google impressions (Search Console, 6 in 28 days) but doesn't link to the article that answers question 1. FAQ and Services already link to it; this adds the same "Further reading" link below the home page's process section (en and zh). Home wording unchanged. Branch: seo/home-related-article.</p>
+<ul><li><strong lang="zh-Hant">位置：</strong><strong lang="en">Where:</strong> /, /zh/<span class="ba was"><b>Before</b>No link to the article</span><span class="ba now"><b>After</b>延伸閱讀 / Further reading: 人在台灣，怎麼遠端買聖地牙哥的房子？流程與分工 / Buying a San Diego home from Taiwan: steps and who does what</span></li></ul>
+<div class="links"><a href="https://qyproperty.com/" target="_blank" rel="noopener">Live page</a><a href="https://github.com/youfun88/qyproperty/compare/main...seo/home-related-article" target="_blank" rel="noopener">Diff</a></div>
+</div>
 <div class="item" data-item="[Yufan] Services: link to the remote-buying article" data-type="setting" data-page="Services" data-page-zh="服務項目" data-status="approved" data-approved="2026-11-21">
 <h3>[Yufan] Services: link to the remote-buying article</h3>
 <p lang="zh-Hant">AI 檢查（2026-11-18）第 1 題「人在台灣，想遠端買聖地牙哥的房子，有推薦的房仲嗎？」：4 個回答裡 QY 被提到 0 次，也沒有被引用。回答這一題的文章已經上線，常見問題頁也已經連過去（2026-11-21 上線）。服務項目頁的「投資流程如何進行？」講的是同一件事，卻沒有連到文章；在流程下方加一個「延伸閱讀」連結（中英文各一），讓搜尋引擎和 AI 從主要服務頁找到文章。服務頁的文字不變。分支：seo/services-related-article。</p>
