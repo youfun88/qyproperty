@@ -11,7 +11,7 @@ import CaseStudies from "@/components/CaseStudies";
 import Team from "@/components/Team";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
-import type { Lang } from "@/lib/site";
+import { href, type Lang } from "@/lib/site";
 
 export default function HomeView({ lang }: { lang: Lang }) {
   return (
@@ -24,6 +24,16 @@ export default function HomeView({ lang }: { lang: Lang }) {
         <Services lang={lang} />
         <ForParents lang={lang} />
         <Process lang={lang} />
+        <section className="px-6 md:px-16 pb-16 bg-surface">
+          <div className="max-w-3xl mx-auto bg-surface-container-low rounded-xl p-6 md:p-8">
+            <h2 className="text-lg font-bold text-primary mb-2">{lang === "zh" ? "延伸閱讀" : "Further reading"}</h2>
+            <a href={href(lang, "buyFromTaiwan")} className="text-secondary font-semibold underline">
+              {lang === "zh"
+                ? "人在台灣，怎麼遠端買聖地牙哥的房子？流程與分工"
+                : "Buying a San Diego home from Taiwan: steps and who does what"}
+            </a>
+          </div>
+        </section>
         <MarketInsights lang={lang} />
         <PricingTiers lang={lang} />
         <CaseStudies lang={lang} />
